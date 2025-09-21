@@ -22,6 +22,13 @@ public:
     BigInt& operator *= (const BigInt&);
     BigInt& operator /= (const BigInt&);
 
+    bool operator == (const BigInt&) const;
+    bool operator != (const BigInt&) const;
+    bool operator >= (const BigInt&) const;
+    bool operator <= (const BigInt&) const;
+    bool operator > (const BigInt&) const;
+    bool operator < (const BigInt&) const;
+
     std::string toString() const;
 
     friend std::ostream& operator << (std::ostream&, const BigInt&);

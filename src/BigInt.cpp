@@ -50,5 +50,31 @@ BigInt& BigInt::operator /= (const BigInt& other) {
     return *this;
 }
 
+bool BigInt::operator == (const BigInt& other) const {
+    return this->value == other.value;
+}
+
+bool BigInt::operator != (const BigInt& other) const {
+    return !(*this == other);
+}
+
+bool BigInt::operator < (const BigInt& other) const {
+    return this->value < other.value;
+}
+
+bool BigInt::operator > (const BigInt& other) const {
+    return other < *this;
+}
+
+bool BigInt::operator <= (const BigInt& other) const {
+    return !(*this > other);
+}
+
+bool BigInt::operator >= (const BigInt& other) const {
+    return !(*this < other);
+    return this->value < other.value;
+}
+
+
 
 
