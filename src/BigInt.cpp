@@ -101,6 +101,13 @@ std::istream& operator >> (std::istream& is, BigInt& b) {
     return is;
 }
 
+int BigInt::compare(const BigInt& a, const BigInt& b) {
+    if (a.value > b.value) return 1;
+    if (a.value < b. value) return -1;
+    // else
+    return 0;
+}
+
 
 
 

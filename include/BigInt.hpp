@@ -4,7 +4,8 @@
 
 class BigInt {
 private:
-    long long value;
+    long long value; 
+
 
 public:
     BigInt(long long v = 0);
@@ -33,4 +34,6 @@ public:
 
     friend std::ostream& operator << (std::ostream&, const BigInt&);
     friend std::istream& operator >> (std::istream&, BigInt&);
+
+    static int compare(const BigInt& a, const BigInt& b);
 };
