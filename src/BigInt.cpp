@@ -53,6 +53,35 @@ BigInt& BigInt::operator /= (const BigInt& other) {
     return *this;
 }
 
+/*
+    BigInt& operator ++ ();
+    BigInt& operator -- ();
+    BigInt operator ++ (int);
+    BigInt operator -- (int);
+*/
+
+BigInt& BigInt::operator ++ () {
+    ++value;
+    return *this;
+}
+
+BigInt& BigInt::operator -- () {
+    --value;
+    return *this;
+}
+
+BigInt BigInt::operator ++ (int) {
+    BigInt temp = *this;
+    ++value;
+    return temp;
+}
+
+BigInt BigInt::operator -- (int) {
+    BigInt temp = *this;
+    --value;
+    return temp;
+}
+
 bool BigInt::operator == (const BigInt& other) const {
     return this->value == other.value;
 }

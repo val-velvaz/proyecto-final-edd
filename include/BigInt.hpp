@@ -23,6 +23,17 @@ public:
     BigInt& operator *= (const BigInt&);
     BigInt& operator /= (const BigInt&);
 
+    /*
+    Los operadores pre devuelven referencia para permitir encadenamiento,
+    mientras que los post devuelven copia porque el valor original
+    debe conservarse
+    */
+    
+    BigInt& operator ++ ();
+    BigInt& operator -- ();
+    BigInt operator ++ (int);
+    BigInt operator -- (int);
+
     bool operator == (const BigInt&) const;
     bool operator != (const BigInt&) const;
     bool operator >= (const BigInt&) const;
