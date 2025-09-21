@@ -32,4 +32,5 @@ public:
     std::string toString() const;
 
     friend std::ostream& operator << (std::ostream&, const BigInt&);
+    friend std::istream& operator >> (std::istream&, BigInt&);
 };
