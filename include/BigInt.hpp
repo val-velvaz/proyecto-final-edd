@@ -1,15 +1,28 @@
 #pragma once
 
 #include <string>
+#include <iostream>
 
 class BigInt {
 private:
-    long long value; 
+    // long long value; 
+    bool negative;
+    int* digits;
+    size_t size;
+    size_t capacity;
 
+    static const int BASE = 1000000000;
+
+    void expand(size_t new_capacity);
+    void normalize();
+
+    static BigInt add_abs(const BigInt& a, const BigInt& b);
 
 public:
     BigInt(long long v = 0);
-    BigInt(long long);
+    // BigInt(long long);
+    BigInt(const BigInt&);
+    ~BigInt();
 
     BigInt& operator = (const BigInt&);
 
